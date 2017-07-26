@@ -1,0 +1,6 @@
+*.hsplay
+*.uuid
+Main.hs
+Setup.hs
+*.cabal
+*.yaml
