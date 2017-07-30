@@ -26,7 +26,7 @@ sumDigits :: [Int] -> Int
 sumDigits = foldr (+) 0 . concat . map toDigits
 
 validate :: Int -> Bool
-validate  = \x -> mod x 10 == 0
+validate  = (== 0) . (`mod` 10)
 
 -- Hanoi Tower
 
