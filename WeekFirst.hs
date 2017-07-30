@@ -35,4 +35,6 @@ type Move = (Peg, Peg)
 hanoiThree :: Integer -> Peg -> Peg -> Peg -> [Move]
 hanoiThree disks source target temp
       | disks <= 1 = [(source, target)]
-      | otherwise = hanoiThree (disks-1) source temp target ++ hanoiThree 1 source target temp ++ hanoiThree (disks -1) temp target source
+      | otherwise = hanoiThree (disks-1) source temp target
+                 ++ hanoiThree 1 source target temp
+                 ++ hanoiThree (disks -1) temp target source
